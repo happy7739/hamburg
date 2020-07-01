@@ -1,0 +1,104 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+<style>
+    .case_page{width: 750px!important;}
+    .case_page ul li{font-size: 20px!important;}
+    .case_page ul li:first-child{width: 65px!important;}
+    .case_page ul li:last-child{width: 65px!important;}
+    .case_page{
+        width: 1200px;
+        height: 25px;
+        margin:30px auto;
+    }
+    .case_page ul{
+        display:table;
+        text-align:center;
+        margin:0 auto;
+    }
+    .case_page ul li{
+        width: 23px;
+        height: 23px;
+        float: left;
+        margin-left: 14px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .case_page ul li a{color: #999999;}
+    .case_page ul li:first-child{
+        width: 45px;
+        height: 25px;
+    }
+    .case_page ul li:last-child{
+        width: 45px;
+        height: 25px;
+    }
+</style>
+{/block}
+
+<!--内容-->
+{block name="main"}
+<!--===================列表===================-->
+{notempty name="data"}
+<div style="height: 25px;">
+</div>
+<div class="lr_juzhong">
+    <div class="tupian">
+        <img alt="汉堡产品" src="/static/index/image/qbcd.jpg" />
+    </div>
+    <div style="height: 112px;">
+    </div>
+    <div class="zhuti">
+        <ul class="msul">
+            {volist name="data" id="val"}
+            <li>
+                <div class="wrap">
+                    <a href="{:url('index/product/index')}?cat={$cat}&id={$val.id}">
+                        <img width="345" height="213" src="{$val.img|get_file_path}
+" alt="{$val.title}">
+                        <i></i>
+                        <p>
+                            <b>{$val.title}</b>
+                            <span>乐享汉堡炸鸡店加盟<br>{$val.desc}</span>
+                        </p>
+                    </a>
+                </div>
+            </li>
+            {/volist}
+        </ul>
+        <!-- 分页 -->
+        <div class="case_page">
+            {$render|raw}
+        </div>
+    </div>
+</div>
+{/notempty}
+
+<!--===================详情===================-->
+{notempty name="details"}
+<div class="eng">
+    <h1>{$details.title}</h1>
+    <div class="eng-text">
+        &nbsp;&nbsp; 发布:{$details.time}&nbsp;&nbsp;
+    </div>
+    <div class="engti" title="文字内容">
+        {$details.text|raw}
+    </div>
+    <div style="height: 1px; width: 850px; margin: 0 auto 10px auto; background: #000;">
+    </div>
+    <div class="eng_shan">
+        上一篇：
+        {notempty name="up"}
+        <a href="{:url('index/product/index')}?cat={$cat}&id={$up.id}">{$up.title}</a>
+        {/notempty}
+    </div>
+    <div class="eng_shan">
+        下一篇：
+        {notempty name="lo"}
+        <a href="{:url('index/product/index')}?cat={$cat}&id={$lo.id}">{$lo.title}</a>
+        {/notempty}
+    </div>
+</div>
+{/notempty}
+{/block}

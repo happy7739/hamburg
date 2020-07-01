@@ -1,0 +1,850 @@
+---------------------------------------------------------------
+
+[2020-06-06T15:26:12+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：1.884712s] [吞吐率：0.53req/s] [内存消耗：1,340.30kb] [文件加载：63]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:28:17+08:00] 127.0.0.1 GET hamburg.com/admin
+[运行时间：0.459890s] [吞吐率：2.17req/s] [内存消耗：1,594.63kb] [文件加载：71]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:28:19+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin
+[运行时间：1.249306s] [吞吐率：0.80req/s] [内存消耗：3,044.16kb] [文件加载：103]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011814s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.057772s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.001094s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.041065s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.051403s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.001081s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.038759s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000587s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.040704s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000887s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:19+08:00] 127.0.0.1 GET hamburg.com/admin.php/user/publics/signin.html
+[运行时间：0.408952s] [吞吐率：2.45req/s] [内存消耗：2,987.09kb] [文件加载：103]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\user/view/admin/publics\signin.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012353s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.042322s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.001268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.026863s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.029852s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.024754s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.026483s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000645s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:28+08:00] 127.0.0.1 POST hamburg.com/admin.php/user/publics/signin.html
+[运行时间：0.739937s] [吞吐率：1.35req/s] [内存消耗：3,119.91kb] [文件加载：108]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/user/publics/signin.html',
+  'origin' => 'http://hamburg.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '29',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011096s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.042574s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.045035s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.027127s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.029486s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.028609s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.045240s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_user` WHERE  `username` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.039044s ]
+[ sql ] [ SQL ] SELECT `access` FROM `dp_admin_role` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000688s ]
+[ sql ] [ SQL ] UPDATE `dp_admin_user`  SET `last_login_time` = 1591428507 , `update_time` = 1591428508  WHERE  `id` = 1 [ RunTime:0.001259s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000629s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_action` [ RunTime:0.039926s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_action` WHERE  `module` = 'user'  AND `name` = 'user_signin' LIMIT 1 [ RunTime:0.003113s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:34+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/index/index.html
+[运行时间：4.249761s] [吞吐率：0.24req/s] [内存消耗：3,448.21kb] [文件加载：118]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/user/publics/signin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'default_pass',
+) ]
+[ info ] [ VIEW ] F:\Project\hamburg\plugins/SystemInfo/view/widget.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'default_pass',
+  11 => 'display',
+  12 => 'width',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\Project\hamburg\plugins/DevTeam/view/widget.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'default_pass',
+  11 => 'display',
+  12 => 'width',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012006s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.043961s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.027241s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.027784s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.026826s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.026876s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000695s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.025837s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.037673s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.006620s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.001242s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/index' LIMIT 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.002707s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/index' LIMIT 1 [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.059922s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.038246s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.027357s ]
+[ sql ] [ SQL ] SELECT `password` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.055915s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.001195s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT `config` FROM `dp_admin_plugin` WHERE  `name` = 'SystemInfo' LIMIT 1 [ RunTime:0.000584s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012735s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] select version() as version [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT `config` FROM `dp_admin_plugin` WHERE  `name` = 'DevTeam' LIMIT 1 [ RunTime:0.000918s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:36+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/index/checkupdate.html
+[运行时间：0.696151s] [吞吐率：1.44req/s] [内存消耗：3,111.09kb] [文件加载：102]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/index/index.html',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001386s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.067437s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.042759s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.001759s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.043737s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.031897s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.037407s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.032260s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.028198s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000657s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011746s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] select version() as version [ RunTime:0.000307s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:40+08:00] 127.0.0.1 POST hamburg.com/admin.php/admin/ajax/getsidebarmenu.html
+[运行时间：0.364812s] [吞吐率：2.74req/s] [内存消耗：3,218.07kb] [文件加载：105]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/index/index.html',
+  'origin' => 'http://hamburg.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '42',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  'module_id' => '4',
+  'module' => 'admin',
+  'controller' => 'system',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011800s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.042087s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.026485s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.033615s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.032988s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.023207s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.026578s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.025801s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000682s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000692s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.002651s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:46+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/system/index.html
+[运行时间：6.571667s] [吞吐率：0.15req/s] [内存消耗：3,715.75kb] [文件加载：112]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\common/builder/form/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'page_title',
+  11 => 'page_tips',
+  12 => 'tips_type',
+  13 => 'btn_hide',
+  14 => 'btn_title',
+  15 => 'form_items',
+  16 => 'tab_nav',
+  17 => 'post_url',
+  18 => 'form_data',
+  19 => 'extra_html',
+  20 => 'extra_js',
+  21 => 'extra_css',
+  22 => 'ajax_submit',
+  23 => 'hide_header',
+  24 => 'header_title',
+  25 => 'js_list',
+  26 => 'css_list',
+  27 => 'field_triggers',
+  28 => 'field_hide',
+  29 => 'field_values',
+  30 => 'field_clear',
+  31 => '_js_files',
+  32 => '_js_init',
+  33 => '_css_files',
+  34 => '_layout',
+  35 => 'btn_extra',
+  36 => 'submit_confirm',
+  37 => 'extend_js_list',
+  38 => 'extend_css_list',
+  39 => '_method',
+  40 => 'empty_tips',
+  41 => '_token_name',
+  42 => '_token_value',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001595s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.025371s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.017586s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.025240s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.028320s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.016512s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.021160s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000979s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.018555s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.002646s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.001065s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000949s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.024157s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.026491s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT `name`,`config`,`title` FROM `dp_admin_module` WHERE  `config` <> ''  AND `status` = 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`title`,`type`,`value`,`options`,`tips`,`ajax_url`,`next_items`,`param`,`format`,`table`,`level`,`key`,`option`,`pid`,`ak`,`create_time`,`update_time`,`sort`,`status` FROM `dp_admin_config` WHERE  `group` = 'base'  AND `status` = 1 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.043132s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.027210s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000575s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:47+08:00] 127.0.0.1 POST hamburg.com/admin.php/admin/ajax/getsidebarmenu.html
+[运行时间：3.003531s] [吞吐率：0.33req/s] [内存消耗：3,218.16kb] [文件加载：105]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/index/index.html',
+  'origin' => 'http://hamburg.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'content-length' => '42',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  'module_id' => '4',
+  'module' => 'admin',
+  'controller' => 'system',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003432s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.042276s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.032800s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.040601s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.031033s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.029161s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.036204s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.065045s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000790s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.001263s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.006012s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:28:54+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/system/index/group/system.html
+[运行时间：0.465717s] [吞吐率：2.15req/s] [内存消耗：3,722.71kb] [文件加载：112]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/system/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  'group' => 'system',
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\common/builder/form/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'page_title',
+  11 => 'page_tips',
+  12 => 'tips_type',
+  13 => 'btn_hide',
+  14 => 'btn_title',
+  15 => 'form_items',
+  16 => 'tab_nav',
+  17 => 'post_url',
+  18 => 'form_data',
+  19 => 'extra_html',
+  20 => 'extra_js',
+  21 => 'extra_css',
+  22 => 'ajax_submit',
+  23 => 'hide_header',
+  24 => 'header_title',
+  25 => 'js_list',
+  26 => 'css_list',
+  27 => 'field_triggers',
+  28 => 'field_hide',
+  29 => 'field_values',
+  30 => 'field_clear',
+  31 => '_js_files',
+  32 => '_js_init',
+  33 => '_css_files',
+  34 => '_layout',
+  35 => 'btn_extra',
+  36 => 'submit_confirm',
+  37 => 'extend_js_list',
+  38 => 'extend_css_list',
+  39 => '_method',
+  40 => 'empty_tips',
+  41 => '_token_name',
+  42 => '_token_value',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011277s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.047606s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.029728s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.028918s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.030689s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.030398s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.029726s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.028507s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000716s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.003112s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.028447s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.029191s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT `name`,`config`,`title` FROM `dp_admin_module` WHERE  `config` <> ''  AND `status` = 1 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`title`,`type`,`value`,`options`,`tips`,`ajax_url`,`next_items`,`param`,`format`,`table`,`level`,`key`,`option`,`pid`,`ak`,`create_time`,`update_time`,`sort`,`status` FROM `dp_admin_config` WHERE  `group` = 'system'  AND `status` = 1 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.001274s ]
+[ sql ] [ SQL ] SELECT `name`,`title` FROM `dp_admin_module` WHERE  `status` >= 0 ORDER BY `id` [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.028973s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.028859s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.001021s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000567s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:29:35+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/system/index/group/develop.html
+[运行时间：0.438514s] [吞吐率：2.28req/s] [内存消耗：3,702.41kb] [文件加载：112]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/system/index/group/system.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  'group' => 'develop',
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\common/builder/form/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'page_title',
+  11 => 'page_tips',
+  12 => 'tips_type',
+  13 => 'btn_hide',
+  14 => 'btn_title',
+  15 => 'form_items',
+  16 => 'tab_nav',
+  17 => 'post_url',
+  18 => 'form_data',
+  19 => 'extra_html',
+  20 => 'extra_js',
+  21 => 'extra_css',
+  22 => 'ajax_submit',
+  23 => 'hide_header',
+  24 => 'header_title',
+  25 => 'js_list',
+  26 => 'css_list',
+  27 => 'field_triggers',
+  28 => 'field_hide',
+  29 => 'field_values',
+  30 => 'field_clear',
+  31 => '_js_files',
+  32 => '_js_init',
+  33 => '_css_files',
+  34 => '_layout',
+  35 => 'btn_extra',
+  36 => 'submit_confirm',
+  37 => 'extend_js_list',
+  38 => 'extend_css_list',
+  39 => '_method',
+  40 => 'empty_tips',
+  41 => '_token_name',
+  42 => '_token_value',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010870s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.044933s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.026439s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.029601s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000718s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.029233s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.029801s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.029624s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.029942s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.003302s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.025646s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.025028s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT `name`,`config`,`title` FROM `dp_admin_module` WHERE  `config` <> ''  AND `status` = 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`title`,`type`,`value`,`options`,`tips`,`ajax_url`,`next_items`,`param`,`format`,`table`,`level`,`key`,`option`,`pid`,`ak`,`create_time`,`update_time`,`sort`,`status` FROM `dp_admin_config` WHERE  `group` = 'develop'  AND `status` = 1 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.028182s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.025348s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000444s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:29:42+08:00] 127.0.0.1 POST hamburg.com/admin.php/admin/system/index/group/develop.html
+[运行时间：0.458974s] [吞吐率：2.18req/s] [内存消耗：3,174.41kb] [文件加载：107]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/system/index/group/develop.html',
+  'origin' => 'http://hamburg.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '92',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  '__token__' => 'ec22192dacb35138bdcced155405237d',
+  'develop_mode' => '0',
+  'app_trace' => '0',
+  'asset_version' => '20180327',
+  'group' => 'develop',
+)
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011565s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.046000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.030847s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.033696s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.030278s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.029842s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.028076s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.027174s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT `name`,`type` FROM `dp_admin_config` WHERE  `group` = 'develop'  AND `status` = 1 [ RunTime:0.000916s ]
+[ sql ] [ SQL ] UPDATE `dp_admin_config`  SET `value` = '0'  WHERE  `name` = 'develop_mode' [ RunTime:0.001106s ]
+[ sql ] [ SQL ] UPDATE `dp_admin_config`  SET `value` = '0'  WHERE  `name` = 'app_trace' [ RunTime:0.001028s ]
+[ sql ] [ SQL ] UPDATE `dp_admin_config`  SET `value` = '20180327'  WHERE  `name` = 'asset_version' [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_action` [ RunTime:0.025529s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_action` WHERE  `module` = 'admin'  AND `name` = 'system_config_update' LIMIT 1 [ RunTime:0.000966s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_log` [ RunTime:0.039057s ]
+[ sql ] [ SQL ] INSERT INTO `dp_admin_log` (`action_id` , `user_id` , `action_ip` , `model` , `record_id` , `create_time` , `remark`) VALUES (42 , 1 , 2130706433 , 'admin_config' , 0 , 1591428582 , '超级管理员 更新了系统设置：分组(develop)') [ RunTime:0.002689s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:29:45+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.033751s] [吞吐率：29.63req/s] [内存消耗：1,340.31kb] [文件加载：63]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:29:45+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/system/index/group/develop.html
+[运行时间：0.671569s] [吞吐率：1.49req/s] [内存消耗：3,702.29kb] [文件加载：112]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/system/index/group/develop.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+  'group' => 'develop',
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\common/builder/form/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'page_title',
+  11 => 'page_tips',
+  12 => 'tips_type',
+  13 => 'btn_hide',
+  14 => 'btn_title',
+  15 => 'form_items',
+  16 => 'tab_nav',
+  17 => 'post_url',
+  18 => 'form_data',
+  19 => 'extra_html',
+  20 => 'extra_js',
+  21 => 'extra_css',
+  22 => 'ajax_submit',
+  23 => 'hide_header',
+  24 => 'header_title',
+  25 => 'js_list',
+  26 => 'css_list',
+  27 => 'field_triggers',
+  28 => 'field_hide',
+  29 => 'field_values',
+  30 => 'field_clear',
+  31 => '_js_files',
+  32 => '_js_init',
+  33 => '_css_files',
+  34 => '_layout',
+  35 => 'btn_extra',
+  36 => 'submit_confirm',
+  37 => 'extend_js_list',
+  38 => 'extend_css_list',
+  39 => '_method',
+  40 => 'empty_tips',
+  41 => '_token_name',
+  42 => '_token_value',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002376s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.037343s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.029061s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.028196s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.028117s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.028874s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.026860s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.042421s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `online_hide` = 0  AND `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.001173s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `online_hide` = 0  AND `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.002049s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/system/index' LIMIT 1 [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.001773s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `online_hide` = 0 ORDER BY `sort`,`id` [ RunTime:0.006717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.057469s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.027657s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT `name`,`config`,`title` FROM `dp_admin_module` WHERE  `config` <> ''  AND `status` = 1 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`title`,`type`,`value`,`options`,`tips`,`ajax_url`,`next_items`,`param`,`format`,`table`,`level`,`key`,`option`,`pid`,`ak`,`create_time`,`update_time`,`sort`,`status` FROM `dp_admin_config` WHERE  `group` = 'develop'  AND `status` = 1 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.026130s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.026212s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000319s ]
+---------------------------------------------------------------
+
+[2020-06-06T15:29:47+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.032692s] [吞吐率：30.59req/s] [内存消耗：1,340.31kb] [文件加载：63]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:29:48+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.034682s] [吞吐率：28.83req/s] [内存消耗：1,340.31kb] [文件加载：63]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:29:48+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.034183s] [吞吐率：29.25req/s] [内存消耗：1,340.31kb] [文件加载：63]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:29:58+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.037657s] [吞吐率：26.56req/s] [内存消耗：1,340.31kb] [文件加载：63]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:32:58+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.104632s] [吞吐率：9.56req/s] [内存消耗：1,204.25kb] [文件加载：60]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:34:25+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html
+[运行时间：0.037450s] [吞吐率：26.70req/s] [内存消耗：1,202.45kb] [文件加载：60]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-06T15:34:45+08:00] 127.0.0.1 GET hamburg.com/xwc-90.html?i=3
+[运行时间：0.030138s] [吞吐率：33.18req/s] [内存消耗：1,202.45kb] [文件加载：60]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php

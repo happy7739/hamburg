@@ -1,0 +1,78 @@
+<!--底部-->
+<div class="bottom-yellow">
+    <div class="yellow-whole">
+        <div class="yellow-left">
+            <div style="font-size: 24px; font-weight: bold;">
+                成都餐协旗下品牌</div>
+            <div>
+                <img alt="" src="{$config.logo|get_file_path}" /></div>
+            <div>
+                <img alt="" src="/static/index/image/phone-num.png" /></div>
+        </div>
+        <div class="yellow-right">
+            <div>
+                <img src="{$config.wx_img|get_file_path}" alt="" title="" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="{$config.wb_img|get_file_path}" alt="" title="" />
+            </div>
+            &nbsp;
+            <div>
+                咨询热线：{$config.tel}<br />
+                客服热线：{$config.mobile}<br />
+                公司地址：{$config.address}<br />
+                品牌所有：成都餐协餐饮管理有限公司<br />
+                投资有风险，选择需谨慎</div>
+        </div>
+        <div class="yellow-lian">
+            友情链接： <a href="http://www.1zhichan.com/">烤肉加盟</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.cdzhibaoyu.com/">纸包鱼加盟</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="yellow-copy">
+            Copyright © 2017 成都餐协餐饮管理有限公司  <a href="http://www.beian.miit.gov.cn/" style="color:#000000;">蜀ICP备12020698号-7</a></div>
+    </div>
+</div>
+<!--底部结束-->
+﻿<script type="text/jscript" language="javascript">
+    $(document).ready(function($){
+        // browser window scroll (in pixels) after which the "back to top" link is shown
+        var offset = 300,
+            //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+            offset_opacity = 1200,
+            //duration of the top scrolling animation (in ms)
+            scroll_top_duration = 700,
+            //grab the "back to top" link
+            $back_to_top = $('#top');
+
+        //hide or show the "back to top" link
+        $(window).scroll(function(){
+            ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+            if( $(this).scrollTop() > offset_opacity ) {
+                $back_to_top.addClass('cd-fade-out');
+            }
+        });
+        //www.sucaijiayuan.com
+        //smooth scroll to top
+        $back_to_top.on('click', function(event){
+            event.preventDefault();
+            $('body,html').animate({
+                    scrollTop: 0 ,
+                }, scroll_top_duration
+            );
+        });
+
+    });
+</script>
+<!--回顶部与其他信息-->
+<div class="toolbar">
+    <a target="_blank" href="http://www2.53kf.com/webCompany.php?arg=10132959&style=10" class="toolbar-item toolbar-item-feedback"></a><a target="_blank"
+                                                                                                                                          href="http://wpa.qq.com/msgrd?v=3&uin=1434414081&site=qq&menu=yes" class="toolbar-item toolbar-item-feedback1">
+</a><a href="#" class="toolbar-item toolbar-item-weixin"><span class="toolbar-layer">
+        </span></a><a href="#" id="top" class="toolbar-item toolbar-item-top"></a>
+</div>
+<script>
+    (function() {
+        var _53code = document.createElement("script");
+        _53code.src = "//tb.53kf.com/code/code/10132959/10";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(_53code, s);
+    })();
+</script>

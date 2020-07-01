@@ -1,0 +1,32 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+{/block}
+
+<!--内容-->
+{block name="main"}
+<div class="eng">
+    <h1>{$data.title}</h1>
+    <div class="eng-text">
+        &nbsp;&nbsp; 发布:{$data.time}&nbsp;&nbsp;
+    </div>
+    <div class="engti" title="文字内容">
+        {$data.text|raw}
+    </div>
+    <div style="height: 1px; width: 850px; margin: 0 auto 10px auto; background: #000;">
+    </div>
+    <div class="eng_shan">
+        上一篇：
+        {notempty name="up"}
+        <a href="{:url('index/product/details')}?cat={$cat}&id={$up.id}">{$up.title}</a>
+        {/notempty}
+    </div>
+    <div class="eng_shan">
+        下一篇：
+        {notempty name="lo"}
+        <a href="{:url('index/product/details')}?cat={$cat}&id={$lo.id}">{$lo.title}</a>
+        {/notempty}
+    </div>
+</div>
+{/block}

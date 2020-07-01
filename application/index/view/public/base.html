@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{$title}</title>
+    <!-- 公共样式和JS -->
+    <link rel="shortcut icon" href="/static/index/image/logo.ico" />
+    <link href="/static/index/css/index.css" rel="stylesheet" type="text/css" />
+    <script src="/static/index/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="/static/index/js/cu.js" type="text/javascript"></script>
+    <script src="/static/index/js/click.js" type="text/javascript"></script>
+    <!--终端判断-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?df73c308692c42e8633d774bf43c1c54";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- 当前页面的样式及JS -->
+    {block name="custom"}{/block}
+</head>
+<body>
+
+{block name="header"}{include file="public/header" /}{/block}
+<!-----主图----->
+<div class="men_zhu">
+    <ul>
+        <li>
+        {block name="banner"}
+            {empty name='n_img'}
+            <img src="/static/index/image/banner.jpg" alt="乐享汉堡" title="乐享汉堡" />
+            {/empty}
+            {notempty name='n_img'}
+            <img src="{$n_img.img|get_file_path}" alt="{$n_img.alt}" title="{$n_img.title}" />
+            {/notempty}
+        {/block}
+        </li>
+    </ul>
+</div>
+<!-----子导航----->
+{block name="menu"}{include file="public/menu" /}{/block}
+<!--主体-->
+{block name="main"}{/block}
+<!--底部-->
+{block name="footer"}{include file="public/footer" /}{/block}
+<!--其他模块-->
+{block name="model"}{/block}
+</body>
+</html>

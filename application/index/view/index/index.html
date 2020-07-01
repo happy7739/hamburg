@@ -1,0 +1,588 @@
+{extend name="public/index" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+<meta name="baidu-site-verification" content="Hm2QqOBHdv" />
+<!--swiper-->
+<link rel="stylesheet" href="/static/index/swiper/css/swiper.min.css">
+<!-- Swiper JS -->
+<script src="/static/index/swiper/js/swiper.min.js"></script>
+<style>
+    .swiper-container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-button-next{
+        color: #F5CB1F;
+        bottom: 0px;
+        top: 95%;
+        right: 40%;
+    }
+    .swiper-button-prev{
+        color: #F5CB1F;
+        bottom: 0px;
+        top: 95%;
+        left: 40%;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets{
+        bottom: 18px;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+    }
+    .swiper-slide img{
+        width:100%;
+        height:auto;
+    }
+
+    .swiper-container2 {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide2 {
+        color: black;
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-container3{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide3 img{
+        width:305px;
+        height:205px;
+    }
+    .swiper-slide4 h3 {
+        position: absolute;
+        bottom: 0;
+        background: url('/static/index/image/red-cover.png') no-repeat;
+        height: 90px;
+        padding-left: 30px;
+        width: 254px;
+    }
+    .swiper-slide4 h3 p {
+        float: left;
+        font-weight: normal;
+        line-height: 90px;
+        color: #000;
+        font-size: 15px;
+    }
+    .swiper-wrapper4 {
+        -webkit-transition-timing-function: linear; /*之前是ease-out*/
+        -moz-transition-timing-function: linear;
+        -ms-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        transition-timing-function: linear;
+        margin: 0 auto;
+    }
+    .swiper-slide4 img{
+        width: 270px;
+        height: 385px;
+        border: 0 none;
+        vertical-align: top;
+    }
+</style>
+<!--滚动、手风琴-->
+<link rel="stylesheet" type="text/css" href="/static/index/css/model.css" />
+<!--滚动、手风琴-->
+<!-- 新闻与趣吃RC -->
+<link rel="stylesheet" type="text/css" href="/static/index/css/newsandrc.css" />
+<!-- 新闻与趣吃RC -->
+<script type="text/javascript">
+
+    /*底部电话滚动限制与关闭开始*/
+    onscroll = function () {
+        var st = document.documentElement.scrollTop || document.body.scrollTop;
+        if (!botphone.offsetWidth && st <= 3650) {
+            botphone.style.display = 'block';
+        }
+        else if (!!botphone.offsetWidth && st > 3650) {
+            botphone.style.display = 'none';
+        }
+    }
+    $(document).ready(function () {
+        $("#botmove").click(function () {
+            $("#botphone").remove();
+        });
+    });
+    /*底部电话滚动限制与关闭结束*/
+</script>
+{/block}
+
+<!--内容-->
+{block name="main"}
+    <!-- 首页大图滚动开始 -->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {notempty name='banner'}
+            {volist name='banner' id='val'}
+            <div class="swiper-slide">
+                <img src="{$val.img|get_file_path}" alt="{$val.alt}" title="{$val.title}"/>
+            </div>
+            {/volist}
+            {/notempty}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            grabCursor: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <!-- 首页大图滚动结束 -->
+    <!--右侧广告栏开始-->
+    <div id="banner_wrap">
+        <div id="new_menu_area">
+            <a href="{:url('index/join/process')}" target="_blank" title="加盟指南">
+                <img src="/static/index/image/index/rightsidead.jpg" alt="乐享汉堡店加盟_广告" />
+            </a>
+        </div>
+        <a class="main_banner_btn" href="#" title="">
+            <img src="/static/index/image/index/rightsidebtn.png" alt="乐享汉堡店加盟_广告按钮" />
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            win_banner();
+            $(window).resize(function () {
+                win_banner();
+            });
+            $(".main_banner_btn").click(function () {
+                if ($("#banner_wrap").hasClass("on")) {
+                    $("#banner_wrap").animate({ "right": 0 }, 500);
+                    $("#banner_wrap").removeClass("on");
+                } else {
+                    $("#banner_wrap").animate({ "right": -640 }, 500);
+                    $("#banner_wrap").addClass("on");
+                }
+
+            });
+        });
+        function win_banner() {
+            var win_wid = $(window).width();
+            if (win_wid < 1280) {
+                $("#banner_wrap").removeClass("on");
+                $("#banner_wrap").css({ "right": 0 }, 500);
+            } else {
+                $("#banner_wrap").addClass("on");
+                $("#banner_wrap").css({ "right": -640 }, 500);
+            }
+        }
+    </script>
+    <!--右侧广告栏结束-->
+    <div style="height: 30px;">
+    </div>
+    <br />
+    <div class="wordsin">
+        <br />
+        <p style="font-size: 24px; font-weight: 500;">
+            &Phi;&nbsp;Maileji Hamburg</p>
+        哆唻客汉堡<br />
+        <br />
+        <p class="title_sta_inside">
+            풍부하다, 맛있다, 신선한 음식, 극력 만듭니다. 새로운, 특색 있는 음식 체인 시스템.</p>
+        <br />
+        <br />
+        <br />
+    </div>
+    <!--视频、新闻、趣吃效果开始-->
+    <div id="ea_c" style="width: 1200px; margin: 0 auto;">
+        <div class="index_cnt">
+            <div class="index_cnt_m">
+                <div class="index_wrap">
+                    <div class="index_con">
+                        <div class="index_con1">
+                            <!--视频效果开始-->
+                            <div class="video">
+                                <div class="video_title">
+                                    产品展示&nbsp;비디오</div>
+                                <div class="in_center_shipin">
+                                    <a href="{:url('index/product/index')}" title="产品展示">
+                                        <img src="/static/index/image/index/shipin.jpg" alt="乐享汉堡店加盟_产品展示" title="产品展示" width="330" height="212" />
+                                    </a>
+                                </div>
+                            </div>
+                            <!--视频效果结束-->
+                            <!--新闻效果开始-->
+                            <div class="xn_c_index_14_industry">
+                                <div class="xn_c_index_14_title">
+                                    <span class="xn_c_index_14_title1">
+                                        <span name="_edi_c5_1">新闻中心&nbsp;소식</span>
+                                    </span>
+                                    <span class="xn_c_index_14_title2">
+                                        <span name="_edi_c5_2"></span>
+                                    </span>
+                                    <span class="xn_c_index_14_title3">
+                                        <a href="{:url('index/news/index')}">
+                                            <span name="_edi_c5_3">+</span>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="xn_c_index_14_indMain">
+                                    <div class="swiper-container2">
+                                        <div class="swiper-wrapper">
+                                            {notempty name='news'}
+                                            {volist name='news' id='val'}
+                                            <div class="swiper-slide2 swiper-slide">
+                                                <div class="xn_c_index_14_indTitle" >
+                                                    <a title="{$val.title}" href="{:url('index/news/index')}?cat={$val.pid}&id={$val.id}" target="_blank">
+                                                        {$val.title}
+                                                    </a>
+                                                </div>
+                                                <div class="xn_c_index_14_data">
+                                                    <span class="xn_c_5_time1">
+                                                        <span class="xn_c_index_14_indData_ctl00_xn_c_5_Text1">
+                                                            {$val.time}
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            {/volist}
+                                            {/notempty}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Initialize Swiper -->
+                                <script>
+                                    var swiper = new Swiper('.swiper-container2', {
+                                        grabCursor: true,
+                                        slidesPerView: 6,
+                                        direction: 'vertical',
+                                        loop: true,
+                                        autoplay: {
+                                            delay: 2000,
+                                            stopOnLastSlide: false,
+                                            disableOnInteraction: false,
+                                        },
+                                    });
+                                </script>
+                            </div>
+                            <!--end_xn_c_index_14_industry新闻效果结束-->
+                            <!--xn_c_index_15_news效果开始-->
+                            <div class="xn_c_index_15_news">
+                                <div class="xn_c_index15_title">
+                                    <span class="xn_c_index15_title1">
+                                        <span name="_edi_c5_4">店铺展示&nbsp;가게 전시</span>
+                                    </span>
+                                    <span class="xn_c_index15_title2">
+                                            <span name="_edi_c5_5"></span>
+                                    </span>
+                                    <span class="xn_c_index15_title3">
+                                        <a href="{:url('index/store/index')}">
+                                            <span name="_edi_c5_6">+</span>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="xn_c_index15_indMain">
+                                    <div class="xn_c_index15_left_btn">
+                                    </div>
+                                    <div class="xn_c_index15_con">
+                                        <div class="swiper-container3" id="swiper_container3">
+                                            <div class="swiper-wrapper">
+                                                {notempty name="store"}
+                                                {volist name="store" id="val"}
+                                                <div class="swiper-slide3 swiper-slide">
+                                                    <img src="{$val.img|get_file_path}">
+                                                </div>
+                                                {/volist}
+                                                {/notempty}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="xn_c_index15_right_btn">
+                                    </div>
+                                </div>
+                                <!-- Initialize Swiper -->
+                                <script>
+                                    var swiper3 = new Swiper('.swiper-container3', {
+                                        /*speed:2000,*/
+                                        grabCursor: true,
+                                        slidesPerView: 1,
+                                        spaceBetween: 30,
+                                        loop: true,
+                                        navigation: {
+                                            nextEl: '.xn_c_index15_right_btn',
+                                            prevEl: '.xn_c_index15_left_btn',
+                                        },
+                                        autoplay: {
+                                            delay: 2000,
+                                            stopOnLastSlide: false,
+                                            disableOnInteraction: false,
+                                        },
+                                    });
+                                    /*鼠标移入停止轮播，鼠标离开 继续轮播*/
+                                    var comtainer = $("#swiper_container3");
+                                    comtainer.onmouseenter = function () {
+                                        alert('???');
+                                        swiper3.stopAutoplay();
+                                    };
+                                    comtainer.onmouseleave = function () {
+                                        alert('???');
+                                        swiper3.startAutoplay();
+                                    }
+                                </script>
+                            </div>
+                            <!--end_xn_c_index_15_news趣吃RC效果结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--视频、新闻、趣吃效果结束-->
+    <div style="height: 280px;">
+    </div>
+    <div class="wordsin">
+        <br />
+        <br />
+        <br />
+        <p class="title_sta">
+            <font>产品体系</font>&nbsp;&nbsp;&nbsp;<a href="{:url('index/product/index')}" title="美味炸鸡">제품 체계</a></p>
+        <br />
+        <p class="title_sta_inside">
+            맛 과 위생 · 건강과 합리적인 가격의 패스트푸드 브랜드.</p>
+        <br />
+    </div>
+    <!-- 首页产品滚动开始 -->
+    <div id="container">
+        <div class="rd2">
+            <img alt="上一张" class="l_btn" src="/static/index/image/index/l-btn.png" />
+            <img alt="下一张" class="r_btn" src="/static/index/image/index/r-btn.png" />
+            <div class="content" style="margin-left: 3%;width: 94%;overflow:hidden;">
+                <div class="swiper-container4">
+                    <div class="swiper-wrapper swiper-wrapper4">
+                        {notempty name='roll'}
+                        {volist name='roll' id='val'}
+                        <div class="swiper-slide4 swiper-slide">
+                            <img src="{$val.img|get_file_path}" alt="{$val.alt}" title='{$val.title}' />
+                            <h3><p>{$val.title}</p></h3>
+                        </div>
+                        {/volist}
+                        {/notempty}
+                    </div>
+                </div>
+            </div>
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper('.swiper-container4', {
+                    grabCursor: true,
+                    speed: 4000,
+                    slidesPerView: 3.6,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 0,
+                        stopOnLastSlide: false,
+                        disableOnInteraction: false,
+                        reverseDirection: true,
+                    },
+                    breakpointsInverse: true,
+                    breakpoints: {
+                        //当宽度大于等于
+                        270: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        },
+                        540: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        810: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        },
+                        1080: {
+                            slidesPerView: 3.6,
+                            spaceBetween: 30
+                        }
+                    }
+                });
+                $(".l_btn").click(function(){
+                    swiper.params.autoplay.reverseDirection=false;
+                });
+                $(".r_btn").click(function(){
+                    swiper.params.autoplay.reverseDirection=true;
+                });
+            </script>
+        </div>
+    </div>
+    <!-- 首页产品滚动结束 -->
+    <!--首页产品滚动加载区域开始-->
+    <script type="text/javascript" src="/static/index/js/common.js"></script>
+    <!--首页产品滚动加载区域结束-->
+    <div class="wordsin">
+        <br />
+        <p class="title_end">
+            <img src="/static/index/image/index/color-line.png" width="350" height="20" alt="乐享汉堡店加盟_分隔线" />
+            <a href="{:url('index/product/index')}" title="汉堡加盟">패스트푸드 가맹</a>
+            <img src="/static/index/image/index/color-line.png" width="350" height="20" alt="乐享汉堡店加盟_分隔线" />
+        </p><br />
+        <img alt="乐享汉堡店加盟_分隔线" src="/static/index/image/index/color-line.png" />
+        <br /><br /><br />
+        <p class="title_sta">
+            <font>店铺展示</font>&nbsp;&nbsp;&nbsp;
+            <a href="{:url('index/store/index')}" title="店铺展示">가게 전시</a>
+        </p>
+        <br />
+        <p class="title_sta_inside">
+            맛 과 위생 · 건강과 합리적인 가격의 패스트푸드 브랜드.</p>
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="in_juzhon">
+        <a title="店铺展示">
+            <img alt="店铺展示" width="100%" height="733" style="background: url(/static/index/image/index/diantest.jpg) no-repeat center;"
+                 src="/static/index/image/alpha.png" />
+        </a>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="wordsin">
+        <br />
+        <br />
+        <p class="title_end">
+            <img src="/static/index/image/index/color-line.png" width="350" height="20" alt="乐享汉堡店加盟_分隔线" />
+            <a href="http://www.lxhanbao.com/dp_xn_1.html" title="店铺展示">가게</a>
+            <img src="/static/index/image/index/color-line.png" width="350" height="20" alt="乐享汉堡店加盟_分隔线" />
+        </p>
+        <br />
+        <img alt="" src="/static/index/image/index/color-line.png" />
+        <br /><br /><br />
+        <p class="title_sta">
+            <font>汉堡炸鸡套餐</font>&nbsp;&nbsp;&nbsp;
+            <a href="{:url('index/product/index')}" title="无骨鸡腿肉">햄버거 후라이드치킨 정식</a>
+        </p>
+        <br />
+        <p class="title_sta_inside">
+            고객들이 REMNANT CHICKEN 을 드시는 모습을 볼 때 가장 행복합니다.<br />
+            다양하게, 풍부하게, 알차게 선물하는 마음으로 항상 준비하겠습니다.
+        </p>
+        <br />
+    </div>
+    <!--手风琴效果开始-->
+    <div class="shoufq">
+        <div class='accordion' style="margin: 0 auto;">
+            <ul>
+            {notempty name='card'}
+                {volist name='card' id='val'}
+                <li>
+                    <div class='title'>
+                        <a href="javascript:void(0);">{$val.title}</a>
+                    </div>
+                    <a href="javascript:void(0);" title="{$val.title}">
+                        <img src='{$val.img|get_file_path}' alt="{$val.alt}" />
+                    </a>
+                </li>
+               {/volist}
+            {/notempty}
+            </ul>
+        </div>
+    </div>
+    <!--手风琴效果结束-->
+    <div class="wordsin">
+        <br /><br />
+        <p class="title_end">
+            <img src="/static/index/image/index/color-line.png" width="350" height="20" alt="汉堡店加盟_分隔线" />
+            <a href="{:url('index/product/index')}" title="无骨鸡腿肉">세트</a>
+            <img src="/static/index/image/index/color-line.png" width="350" height="20" alt="汉堡店加盟_分隔线" />
+        </p><br />
+        <img alt="汉堡店加盟_分隔线" src="/static/index/image/index/color-line.png" />
+        <br /><br /><br />
+        <p class="title_sta">
+            <font>品牌前景</font>&nbsp;&nbsp;&nbsp;
+            <a href="{:url('index/aboutus/details')}?cat=1" title="品牌资质">브랜드 전망</a>
+        </p><br />
+    </div>
+    <!--品牌前景开始-->
+    <div style="width: 1100px; margin: 20px auto;">
+        <div style="width: 600px; float: left;">
+            <img src="/static/index/image/index/bro-fb.png" alt="汉堡店加盟_公司标志" title="公司标志" />
+        </div>
+        <div style="width: 500px; float: right;">
+            <div style="width: 130px; height: 4px; background-color: #fff; margin-bottom: 40px;
+                margin-top: 75px;"></div>
+            <div style="margin-top: 20px; font-size: 14px;">
+                民以食为天，吃是永远的朝阳产业，不分国籍，不分地域，中国是个有着13亿人口的大市场，13亿人的胃，永远也填不饱。餐饮行业无论在任何时候都是个投入少、产出高、低风险的行业。
+            </div>
+            <div style="margin-top: 20px; font-size: 14px;">
+                汉堡炸鸡，在一条百年街上有一家经营了近十年的汉堡店，没有华丽的装修，却引得众多食客慕名而来。
+            </div>
+            <div style="margin-top: 20px; font-size: 14px;">
+                秉承着专注精致、注重细节的家族精神，成都餐协餐饮管理有限公司将此美味的秘方引入中国，让更多中国消费者能品尝到传统地道的西式快餐品牌。
+            </div>
+            <div style="margin-top: 20px; font-size: 14px;">
+                可谓正宗，服务周全。炸鸡汉堡加盟选乐享汉堡。公司提供全方位的技术支持与服务，让您选择的事业没有后顾之忧！
+            </div>
+        </div>
+    </div>
+    <!--品牌前景结束-->
+    <div style="height: 480px;">
+    </div>
+    <!--底部电话开始-->
+    <div style="background-color: #f5cb1f; opacity: 1; width: 100%;">
+        <div id="botphone">
+            <img src="/static/index/image/index/bottom_hold.png" usemap="#Map" border="0" alt="汉堡店加盟_底部电话" />
+            <map name="Map" id="Map">
+                <area shape="rect" coords="1479,33,1515,69" id="botmove" title="关闭" />
+            </map>
+        </div>
+    </div>
+    <!--底部电话结束-->
+
+{/block}

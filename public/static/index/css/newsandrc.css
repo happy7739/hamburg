@@ -1,0 +1,92 @@
+/*--Public首页视频、新闻、小图公共部分开始--*/
+@charset "utf-8";
+html, body, div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {margin: 0; padding: 0; }
+img { border: 0 none; vertical-align: top; }
+ul,li,dl,dd,dt { list-style-type: none; }
+i,em,cite { font-style: normal; }
+body {  -webkit-text-size-adjust:none; /* 谷歌不支持12px以下字号 */ font-family:"微软雅黑";}
+a{ text-decoration: none; }
+.clear,.cle {clear:both;}
+a,area { blr:expression(this.onFocus=this.blur()) }   /*  去掉IE下链接虚线框 */
+a:focus { outline: none; }    /* 去掉火狐下链接虚线框 */
+/*--end_Public--首页视频、新闻、小图公共部部分结束*/
+
+/*--i_video首页视频开始--*/
+.i_video{width:380px;height:285px;overflow:hidden;float:left;}
+.i_video_f{position:relative; width:100%; height:100%;}
+.i_video_t{width:100%;height:35px;line-height:35px;background:url(/static/index/image/CgAGS1dWtG-ATwBOAAADqcjBL20690.png) repeat;overflow:hidden;border-bottom:1px solid #502c2c;}
+.i_video_t1{ float:left;font-size:16px;color:#fff;font-weight:bold;margin-left:12px;}
+.i_video_t2{ float:left; font-size:12px;color:#f59438;line-height:40px;margin-left:3px;font-family: arial;}
+.i_video_t3 a{ float:right;margin-right:12px;background:url(/static/index/image/icpsp_more.png) no-repeat right 11px;padding-right:18px;color:#f59438;}
+.i_video_cnt{ width:325px; height:214px;overflow:hidden;background:#000;}
+.i_video_content{text-indent:24px;width:auto;line-height:20px;height:140px;overflow:hidden;display:block;color:#fff;font-size:12px;margin:12px;}
+#EIMS_C_56_1_Paras {width:300px; height: 190px;margin:12px 0 0 12px;}
+.i_video_more{display:none;}
+.i_video_more a{background:url(/static/index/image/icpsp1_index_commore1.png) no-repeat; width:44px; height:11px; display: block;}
+.i_video_more a:hover{background:url(/static/index/images/icpsp1_index_commore2.png) no-repeat; width:44px; height:11px;}
+/*--end_i_video首页视频结束--*/
+/*--xn_c_index_14_industry首页小图开始--*/
+.xn_c_index_14_industry{width:380px;height:284px;background:url(/static/index/image/news-bgt.png);background-repeat:no-repeat;overflow: hidden; float:left; margin-left:30px;}
+.xn_c_index_14_title{
+	width: 100%;
+    height: 50px;
+    line-height: 60px;
+    overflow:hidden;}
+.xn_c_index_14_title1{ float:left;font-size:16px;color:#000;font-weight:bold;margin-left:24px;}
+.xn_c_index_14_title2{ float:left; font-size:12px;color:#f59438;line-height:40px;margin-left:3px;font-family: arial;}
+.xn_c_index_14_title3 a{ float:right;margin-right:12px;font-size:24px;font-weight:600;padding-right:18px;color:#000;}
+.xn_c_index_14_indImg{display:none;}
+.xn_c_index_14_indImg img{width: 194px;height: 134px;}
+.xn_c_index_14_indTitle{width:230px;height:36px;float:left; margin-left:10px;}
+.xn_c_index_14_indTitle a:visited {color: #fff}  
+.xn_c_index_14_indTitle a{display:block; text-align:left; color:#fff;height:36px;line-height:36px;font-size:13px;overflow:hidden;white-space: nowrap;text-overflow:ellipsis; /*溢出省略号，支持ie、safari（webkit）*/
+	-o-text-overflow:ellipsis; /*溢出省略号，支持opera*/ overflow:hidden;/*溢出隐藏*/ -moz-binding:url('ellipsis.xml#ellipsis');}
+.xn_c_index_14_indLi:hover a,.xn_c_index_14_indLi:hover span{color:#f45b3c;}
+.xn_c_index_14_data{margin-left:26px;float:left;width:auto;height:36px;line-height:36px;}
+.xn_c_5_time1, .xn_c_5_time2, .xn_c_5_time3, .xn_c_5_time4, .xn_c_5_time5 {
+    float: left;
+    color: #fff;
+    font-size: 13px;
+}
+.xn_c_index_14_con{width:100%;height:48px;line-height:16px;color:#ccc;font-size:12px;margin-top:6px;overflow:hidden;}
+.xn_c_index_14_indMain>span {
+    width: 100%;
+    height: 220px;
+    display: block;
+    overflow: hidden;
+	text-align:left;
+}
+.xn_c_index_14_indLi{overflow:hidden;}
+ 
+.xn_c_index_14_indCol{float:left;width:100px;height:175px;line-height:175px;text-align:center;}
+.xn_c_index_14_indMain{width:100%;height:235px;overflow:hidden;background:url(/static/index/image/news-bgb.png)repeat;}
+.xn_c_index_14_indMore{float: left;height: 175px;width: 40px;line-height: 175px;padding:0px 15px;}
+/*--end_xn_c_index_14_industry首页小图结束--*/
+/*--xn_c_index_15_news首页新闻开始*/
+.xn_c_index_15_news{width:380px;height:285px;background:url(/static/index/image/news-bgt.png);background-repeat:no-repeat;padding:0px;float:right;overflow:hidden;}
+.xn_c_index15_title{
+	width: 100%;
+    height: 50px;
+    line-height: 60px;
+    overflow:hidden;}
+.xn_c_index15_title1{ float:left;font-size:16px;color:#000;font-weight:bold;margin-left:24px;}
+.xn_c_index15_title2{ float:left; font-size:12px;color:#f59438;line-height:40px;margin-left:3px;font-family: arial;}
+.xn_c_index15_title3 a{ float:right;margin-right:12px;font-size:24px;font-weight:600;padding-right:18px;color:#000;} 
+.xn_c_index15_indMain{width:100%;height:235px;overflow:hidden;background:url(/static/index/image/news-bgb.png);position:relative;}
+.xn_c_index15_con{width:330px;height:212px;margin:8px 28px;overflow:hidden;}
+.xn_c_index15_indLi{width:330px;height:212px;float:left;}
+.xn_c_index15_indMain:hover a{display:block;}
+.xn_c_index15_indLi img{width:330px;height:212px;}
+.xn_c_index15_indTitle{width:100%;height:30px;line-height:30px;margin-top:-30px;position:relative;}
+.xn_c_index15_indTitle a{color:#000;background:#f5cb1f;font-size:14px;text-align:left;width:100%;height:30px;display:none;white-space: nowrap;text-overflow:ellipsis; 
+	/*溢出省略号，支持ie、safari（webkit）*/ -o-text-overflow:ellipsis; /*溢出省略号，支持opera*/ overflow:hidden;/*溢出隐藏*/ -moz-binding:url('ellipsis.xml#ellipsis');  }
+.xn_c_index15_indUl{width:10000px;overflow:hidden;}
+.xn_c_index16_indMain{width:300px;height:81px;margin-left:12px;overflow:hidden;position:relative;}
+.xn_c_index15_indMain:hover>div{display:block;}
+.xn_c_index16_indUl{width:auto;height:81px;overflow:hidden;}
+.xn_c_index16_indLi{width:98px;height:80px;float:left;margin-right:2px;}
+.xn_c_index16_indLi img{width:98px;height:80px;}
+.xn_c_index15_left_btn,.xn_c_index15_right_btn{width:22px;height:42px;position:absolute;top:80px;cursor:pointer;display:none;}
+.xn_c_index15_left_btn{background:url(/static/index/image/index/l-btn.png) no-repeat;left: 12px;}
+.xn_c_index15_right_btn{background:url(/static/index/image/index/r-btn.png) no-repeat;right: 10px;}
+/*--end_xn_c_index_15_news首页新闻结束--*/

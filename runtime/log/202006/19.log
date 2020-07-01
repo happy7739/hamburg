@@ -1,0 +1,50 @@
+---------------------------------------------------------------
+
+[2020-06-19T14:57:40+08:00] 127.0.0.1 GET hamburg.com/admin
+[运行时间：0.964197s] [吞吐率：1.04req/s] [内存消耗：1,594.63kb] [文件加载：71]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-06-19T14:57:41+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin
+[运行时间：0.395002s] [吞吐率：2.53req/s] [内存消耗：2,202.07kb] [文件加载：94]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj; dolphin___forward__=%2Fadmin.php%2Fadmin%2Fnavigation%2Findex.html; Hm_lvt_df73c308692c42e8633d774bf43c1c54=1592370475',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2020-06-19T14:57:41+08:00] 127.0.0.1 GET hamburg.com/admin.php/user/publics/signin.html
+[运行时间：0.152621s] [吞吐率：6.55req/s] [内存消耗：2,144.66kb] [文件加载：94]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7clpbegq8jvqm4rrce9potiotj; dolphin___forward__=%2Fadmin.php%2Fadmin%2Fnavigation%2Findex.html; Hm_lvt_df73c308692c42e8633d774bf43c1c54=1592370475',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\user/view/admin/publics\signin.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+) ]

@@ -1,0 +1,37 @@
+<!--导航栏-->
+<div id="nav" class="nav">
+    {notempty name="nav"}
+    <ul>
+        {volist name="nav" id="val"}
+        <li class='' id="active_{$val.id}">
+            <a href="{:url($val['url_value'])}{neq name='val.params' value=''}?{$val.params}{/neq}">
+                {$val.korean}<span>{$val.title}</span>
+            </a>
+            <div class="n"></div>
+            {notempty name="val['arr']"}
+            <ul>
+                {volist name="val['arr']" id="v"}
+                <li><a href="{:url($v['url_value'])}{neq name='v.params' value=''}?{$v.params}{/neq}">{$v.title}</a></li>
+                {/volist}
+                <li class="t"></li>
+            </ul>
+            {/notempty}
+        </li>
+        {/volist}
+    </ul>
+    {/notempty}
+</div>
+<script>
+    window.onload =function() {
+        var nav_pid =  "{$nav_pid}";
+        var nav_id =  "{$nav_id}";
+        var str1 = '#active_' + nav_pid;
+        console.log(nav_pid);
+        $(str1).addClass('active-show');
+        if (nav_id != 0){
+            console.log(nav_id);
+            var str2 = '#tebs_' + nav_id;
+            $(str2).addClass('active-show');
+        }
+    }
+</script>

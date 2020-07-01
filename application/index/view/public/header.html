@@ -1,0 +1,57 @@
+<!--头部-->
+<div style="background-color: #F5CB1F; width: 100%; position: relative;" class="over_top">
+    <div style="margin: 0 auto; width: 950px; height: 180px;">
+        <div style="float: left; width: 500px;">
+            <a href="/" title="汉堡logo">
+                <img src="{$config.logo|get_file_path}" alt="汉堡店加盟_logo" /></a>
+        </div>
+        <div style="float: left; width: 450px;">
+            <div style="width: 450px; text-align: right;">
+                <img src="/static/index/image/phone.png" alt="汉堡店加盟_加盟热线" title="加盟热线" /></div>
+            <div style="width: 450px; text-align: right; font-size: 26px; color: #000;">
+                400-1080-517</div>
+            <div style="width: 450px; text-align: right;">
+                <img src="/static/index/image/menu.png" alt="汉堡店加盟_菜单" title="菜单" /></div>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div id="nav" class="nav">
+    <ul>
+        {notempty name="nav"}
+        <div class="n"></div>
+        {volist name="nav" id="val"}
+        <li class='' id="active_{$val.id}">
+            <a style="width: 116px;" href="{:url($val['url_value'])}{neq name='val.params' value=''}?{$val.params}{/neq}">
+                {$val.korean}<span>{$val.title}</span>
+            </a>
+            <div class="n"></div>
+            {notempty name="val['arr']"}
+            <ul>
+                {volist name="val['arr']" id="v"}
+                <li>
+                    <a href="{:url($v['url_value'])}{neq name='v.params' value=''}?{$v.params}{/neq}">{$v.title}</a>
+                </li>
+                {/volist}
+                <li class="t"></li>
+            </ul>
+            {/notempty}
+        </li>
+        {/volist}
+        {/notempty}
+    </ul>
+</div>
+<script>
+    window.onload =function() {
+        var nav_pid =  "{$nav_pid}";
+        var nav_id =  "{$nav_id}";
+        var str1 = '#active_' + nav_pid;
+        console.log(nav_pid);
+        $(str1).addClass('active-show');
+        if (nav_id != 0){
+            console.log(nav_id);
+            var str2 = '#tebs_' + nav_id;
+            $(str2).addClass('active-show');
+        }
+    }
+</script>

@@ -1,0 +1,237 @@
+---------------------------------------------------------------
+
+[2020-06-05T08:59:55+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/message/index.html
+[运行时间：6.909703s] [吞吐率：0.14req/s] [内存消耗：3,774.83kb] [文件加载：115]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_df73c308692c42e8633d774bf43c1c54=1591165927; PHPSESSID=c6uc6psndqrqr9d2jpfoipbdqt; dolphin___forward__=%2Fadmin.php%2Fadmin%2Fnavigation%2Findex.html; Hm_lpvt_df73c308692c42e8633d774bf43c1c54=1591318783',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://hamburg.com/admin.php/admin/card/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\common/builder/table/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'page_title',
+  11 => 'page_tips',
+  12 => 'tips_type',
+  13 => 'tab_nav',
+  14 => 'hide_checkbox',
+  15 => 'extra_html',
+  16 => 'extra_js',
+  17 => 'extra_css',
+  18 => 'order_columns',
+  19 => 'filter_columns',
+  20 => 'filter_map',
+  21 => '_field_display',
+  22 => '_filter_content',
+  23 => '_filter',
+  24 => 'top_buttons',
+  25 => 'right_buttons',
+  26 => 'search',
+  27 => 'search_button',
+  28 => 'columns',
+  29 => 'pages',
+  30 => 'row_list',
+  31 => '_page_info',
+  32 => 'primary_key',
+  33 => '_table',
+  34 => 'js_list',
+  35 => 'css_list',
+  36 => 'validate',
+  37 => '_js_files',
+  38 => '_css_files',
+  39 => '_select_list',
+  40 => '_filter_time',
+  41 => 'empty_tips',
+  42 => '_search_area',
+  43 => '_search_area_url',
+  44 => '_search_area_op',
+  45 => 'builder_height',
+  46 => 'fixed_right_column',
+  47 => 'fixed_left_column',
+  48 => 'column_width',
+  49 => 'column_hide',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015941s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.102565s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.001229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.075430s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.001600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.069243s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.090274s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000858s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.092122s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.003715s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.090627s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.081394s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.001603s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/message/index' LIMIT 1 [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000848s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.003162s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/message/index' LIMIT 1 [ RunTime:0.001296s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.001347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.060924s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.001968s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.060084s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_message` [ RunTime:0.070059s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_home_message` [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_home_message` ORDER BY `id` DESC LIMIT 0,20 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/message/delete' LIMIT 1 [ RunTime:0.000731s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/message/enable' LIMIT 1 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/message/delete' LIMIT 1 [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/message/index' LIMIT 1 [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.165033s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.095247s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000396s ]
+---------------------------------------------------------------
+
+[2020-06-05T13:43:38+08:00] 127.0.0.1 GET hamburg.com/admin.php/admin/pageimg/index.html
+[运行时间：8.166388s] [吞吐率：0.12req/s] [内存消耗：3,830.34kb] [文件加载：115]
+[ info ] [ LANG ] F:\Project\hamburg\thinkphp\lang\zh-cn.php
+[ info ] [ DB ] INIT mysql
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_df73c308692c42e8633d774bf43c1c54=1591165927; PHPSESSID=c6uc6psndqrqr9d2jpfoipbdqt; dolphin___forward__=%2Fadmin.php%2Fadmin%2Fnavigation%2Findex.html; Hm_lpvt_df73c308692c42e8633d774bf43c1c54=1591318783',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'hamburg.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] F:\Project\hamburg\application\common/builder/table/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+  3 => '_top_menus',
+  4 => '_top_menus_all',
+  5 => '_sidebar_menus',
+  6 => '_location',
+  7 => '_message',
+  8 => '_icons',
+  9 => 'aside',
+  10 => 'page_title',
+  11 => 'page_tips',
+  12 => 'tips_type',
+  13 => 'tab_nav',
+  14 => 'hide_checkbox',
+  15 => 'extra_html',
+  16 => 'extra_js',
+  17 => 'extra_css',
+  18 => 'order_columns',
+  19 => 'filter_columns',
+  20 => 'filter_map',
+  21 => '_field_display',
+  22 => '_filter_content',
+  23 => '_filter',
+  24 => 'top_buttons',
+  25 => 'right_buttons',
+  26 => 'search',
+  27 => 'search_button',
+  28 => 'columns',
+  29 => 'pages',
+  30 => 'row_list',
+  31 => '_page_info',
+  32 => 'primary_key',
+  33 => '_table',
+  34 => 'js_list',
+  35 => 'css_list',
+  36 => 'validate',
+  37 => '_js_files',
+  38 => '_css_files',
+  39 => '_select_list',
+  40 => '_filter_time',
+  41 => 'empty_tips',
+  42 => '_search_area',
+  43 => '_search_area_url',
+  44 => '_search_area_op',
+  45 => 'builder_height',
+  46 => 'fixed_right_column',
+  47 => 'fixed_left_column',
+  48 => 'column_width',
+  49 => 'column_hide',
+  50 => 'validate_fields',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029604s ] mysql:host=127.0.0.1;port=3306;dbname=hamburg;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_config` [ RunTime:0.106604s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `dp_admin_config` [ RunTime:0.001601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_module` [ RunTime:0.087740s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `dp_admin_module` WHERE  `config` <> '' [ RunTime:0.002452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook` [ RunTime:0.098894s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_hook` WHERE  `status` = 1 [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_plugin` [ RunTime:0.081620s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `dp_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_hook_plugin` [ RunTime:0.074629s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_hook_plugin` WHERE  `status` = 1 ORDER BY `hook`,`sort` [ RunTime:0.002034s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_role` [ RunTime:0.101631s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `dp_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001398s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_menu` [ RunTime:0.084324s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `dp_admin_menu` WHERE  `id` = in [ RunTime:0.001608s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY `sort`,`id` [ RunTime:0.000915s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/pageimg/index' LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon`,`params` FROM `dp_admin_menu` WHERE  `status` = 1 ORDER BY `sort`,`id` [ RunTime:0.002940s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/pageimg/index' LIMIT 1 [ RunTime:0.000850s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_message` [ RunTime:0.077169s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_admin_message` WHERE  `status` = 0  AND `uid_receive` = 1 [ RunTime:0.002632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_icon` [ RunTime:0.073759s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_icon` WHERE  `status` = 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT `value` FROM `dp_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_home_page_img` [ RunTime:0.098954s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dp_home_page_img` [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_home_page_img` ORDER BY `sort` LIMIT 0,20 [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_attachment` [ RunTime:0.077176s ]
+[ sql ] [ SQL ] SELECT `path` FROM `dp_admin_attachment` WHERE  `id` = 332 LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT `path` FROM `dp_admin_attachment` WHERE  `id` = 333 LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT `path` FROM `dp_admin_attachment` WHERE  `id` = 334 LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT `path` FROM `dp_admin_attachment` WHERE  `id` = 335 LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT `path` FROM `dp_admin_attachment` WHERE  `id` = 336 LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/pageimg/add' LIMIT 1 [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/pageimg/enable' LIMIT 1 [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/pageimg/disable' LIMIT 1 [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/pageimg/delete' LIMIT 1 [ RunTime:0.000832s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/pageimg/edit' LIMIT 1 [ RunTime:0.000778s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_menu` WHERE  `url_value` = 'admin/pageimg/delete' LIMIT 1 [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT `id` FROM `dp_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/pageimg/index' LIMIT 1 [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value`,`params` FROM `dp_admin_menu` [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dp_admin_user` [ RunTime:0.072057s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `dp_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `dp_admin_attachment` WHERE  `id` = 242 LIMIT 1 [ RunTime:0.000540s ]

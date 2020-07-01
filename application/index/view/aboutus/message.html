@@ -1,0 +1,141 @@
+{extend name="public/base" /}
+
+<!-- 当前页面的样式及JS -->
+{block name="custom"}
+<script src="/static/index/js/jquery.form.js"></script>
+<script src="/static/index/js/layer/layer.js"></script>
+{/block}
+
+<!--内容-->
+{block name="main"}
+<!-----主体----->
+<div style="height: 25px;">
+</div>
+<div class="lr_juzhong">
+    <form id="addForm" action="{:url('index/Aboutus/save')}" method="post">
+        {:token()}
+        <div class="liuyan">
+            <table>
+                <tr>
+                    <td class="bt">
+                        姓名
+                    </td>
+                    <td class="xm">
+                        <input name="name" maxlength="20" type="text" class="in" id="name"/>
+                        <span>*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bt">
+                        手机
+                    </td>
+                    <td class="xm">
+                        <input name="mobile" id="mobile" maxlength="11" type="number" class="in" />
+                        <span>*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bt">
+                        性别
+                    </td>
+                    <td class="xm">
+                        <label for="xs">
+                            先生
+                            <input type="radio" name="sex" value="0" checked="checked" id="xs" />
+                        </label>
+                        <label for="ns">
+                            女士
+                            <input type="radio" name="sex" value="1" id="ns" />
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bt">
+                        微信号
+                    </td>
+                    <td class="xm">
+                        <input name="wx" maxlength="30" type="text" class="in" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bt">
+                        QQ
+                    </td>
+                    <td class="xm">
+                        <input name="qq" maxlength="20" type="text" class="in" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bt">
+                        留言
+                    </td>
+                    <td class="xm">
+                        <textarea name="content" maxlength="500"></textarea>
+                        <span>*</span>
+                    </td>
+                </tr>
+            </table>
+            <div class="anniu">
+                <button class="tj" type="submit">提 交</button>
+                <button class="cz" type="reset">重 置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    /*<====================================表单提交==========================================>*/
+    $('#addForm').ajaxForm({
+        //前端验证
+        beforeSubmit:function () {
+            if($.trim($('#name').val()) == ''){
+                layer.msg('姓名不能为空',{icon: 5,time:1500,shade:0.5});
+                return false;
+            }
+            if($.trim($('#mobile').val()) == ''){
+                layer.msg('电话不能为空',{icon: 5,time:1500,shade:0.5});
+                return false;
+            }
+        },
+        //提交到后台后，和后台进行交互 ，处理结果
+        success:function (res){
+            //console.log(res);
+            if(res.code == 1){
+                layer.alert('我们会尽快联系你的，请保持手机畅通！', {
+                    icon: 1,    //图标
+                    title:res.msg,  //标题
+                    closeBtn: 1,    // 是否显示关闭按钮
+                    anim: 4, //动画类型
+                    move: false,//是否可以拖动，默认可以拖动
+                    yes:function(){     //确定按钮
+                        history.go(0);
+                    },
+                    cancel: function(){     // 右上角关闭按钮的点击事件
+                        history.go(0);
+                    }
+                });
+            }else{
+                layer.alert('请稍后再试！', {
+                    icon: 5,    //图标
+                    title:res.msg,  //标题
+                    closeBtn: 1,    // 是否显示关闭按钮
+                    anim: 4, //动画类型
+                    move: false,//是否可以拖动，默认可以拖动
+                    yes:function(){     //确定按钮
+                        history.go(0);
+                    },
+                    cancel: function(){     // 右上角关闭按钮的点击事件
+                        history.go(0);
+                    }
+                });
+            }
+        },
+
+        //其他错误信息
+        error:function () {
+            layer.msg("非法操作",{icon: 5,time:1500,shade:0.5});
+            return false;
+        },
+    })
+</script>
+{/block}

@@ -1,0 +1,13 @@
+<!-----子导航----->
+<div id="menu">
+    {notempty name="menu"}
+    <ul>
+        {volist name="menu" id="val"}
+        <li class="" id="tebs_{$val.id}">
+            <a href="{:url($val['url_value'])}{neq name='val.params' value=''}?{$val.params}{/neq}" title="{$val.title}">{$val.title}</a>
+            <a href="{:url($val['url_value'])}{neq name='val.params' value=''}?{$val.params}{/neq}" title="{$val.korean}">{$val.korean}</a>
+        </li>
+        {/volist}
+    </ul>
+    {/notempty}
+</div>
